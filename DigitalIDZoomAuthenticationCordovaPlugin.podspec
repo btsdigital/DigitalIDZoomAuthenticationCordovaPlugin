@@ -10,7 +10,7 @@ The cordova plugin for Zoom SDK framework integration
   s.author           = { 'DigitalID' => 'almas.adilbek@btsdigital.kz' }
   s.source           = { :git => 'https://github.com/btsdigital/DigitalIDZoomAuthenticationCordovaPlugin.git', :tag => "v#{s.version}" }
   s.source_files     = 'DigitalIDZoomAuthenticationCordovaPlugin/*.{h,m}'
-  s.ios.vendored_frameworks = 'ZoomAuthentication.framework'
+  s.ios.vendored_frameworks = 'DigitalIDZoomAuthenticationCordovaPlugin/ZoomAuthentication.framework'
   s.dependency 'Cordova'
 
   s.ios.deployment_target = '11.0'
