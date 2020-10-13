@@ -11,8 +11,23 @@
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* ZoomAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* ZoomAuthentication.m */; };
 		AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* ZoomAuthentication.h */; };
-		AABF09C82535AD79006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */; };
+		AABF09D72535B3E3006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */; };
+		AABF09D82535B3E3006629E5 /* ZoomAuthentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AABF09D92535B3E3006629E5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AABF09D82535B3E3006629E5 /* ZoomAuthentication.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -31,8 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABF09C82535AD79006629E5 /* ZoomAuthentication.framework in Frameworks */,
 				7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
+				AABF09D72535B3E3006629E5 /* ZoomAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +98,6 @@
 				29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */,
 				9FB216CA26342482DF352D2A /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +125,7 @@
 				AABF09B12535AD15006629E5 /* Sources */,
 				AABF09B22535AD15006629E5 /* Frameworks */,
 				AABF09B32535AD15006629E5 /* Resources */,
+				AABF09D92535B3E3006629E5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
