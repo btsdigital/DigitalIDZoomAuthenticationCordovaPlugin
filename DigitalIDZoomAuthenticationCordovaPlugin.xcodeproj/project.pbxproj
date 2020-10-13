@@ -11,8 +11,7 @@
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* ZoomAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* ZoomAuthentication.m */; };
 		AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* ZoomAuthentication.h */; };
-		AABF09D72535B3E3006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */; };
-		AABF09D82535B3E3006629E5 /* ZoomAuthentication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AABF09DD2535B76B006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AABF09D82535B3E3006629E5 /* ZoomAuthentication.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +36,7 @@
 		AABF09B92535AD15006629E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AABF09C12535AD65006629E5 /* ZoomAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomAuthentication.m; sourceTree = "<group>"; };
 		AABF09C22535AD65006629E5 /* ZoomAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomAuthentication.h; sourceTree = "<group>"; };
-		AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomAuthentication.framework; sourceTree = "<group>"; };
+		AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomAuthentication.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
-				AABF09D72535B3E3006629E5 /* ZoomAuthentication.framework in Frameworks */,
+				AABF09DD2535B76B006629E5 /* ZoomAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +81,11 @@
 		AABF09B72535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */,
 				AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */,
 				AABF09C22535AD65006629E5 /* ZoomAuthentication.h */,
 				AABF09C12535AD65006629E5 /* ZoomAuthentication.m */,
 				AABF09B92535AD15006629E5 /* Info.plist */,
-				AABF09C62535AD74006629E5 /* ZoomAuthentication.framework */,
 			);
 			path = DigitalIDZoomAuthenticationCordovaPlugin;
 			sourceTree = "<group>";
@@ -343,8 +341,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/DigitalIDZoomAuthenticationCordovaPlugin",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -374,8 +373,9 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/DigitalIDZoomAuthenticationCordovaPlugin",
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
