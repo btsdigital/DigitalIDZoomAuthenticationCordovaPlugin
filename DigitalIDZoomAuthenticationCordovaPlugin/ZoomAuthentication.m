@@ -9,7 +9,6 @@
 - (void)initialize:(CDVInvokedUrlCommand*)command {
     NSString* licenseKeyIdentifier = [command.arguments objectAtIndex:0];
 
-    NSLog(@"configure locale X %@", [NSBundle bundleForClass:[self class]]);
     [[Zoom sdk] configureLocalizationWithTable:@"Zoom"
                                         bundle:[NSBundle bundleForClass:[self class]]];
     
@@ -35,7 +34,6 @@
     NSString* licenseText = [command.arguments objectAtIndex:0];
     NSString* licenseKeyIdentifier = [command.arguments objectAtIndex:1];
 
-    NSLog(@"configure locale Y");
     [[Zoom sdk] configureLocalizationWithTable:@"Zoom"
                                         bundle:[NSBundle bundleForClass:[self class]]];
     
