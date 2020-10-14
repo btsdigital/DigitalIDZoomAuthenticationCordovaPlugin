@@ -12,6 +12,11 @@
 "zoom_camera_permission_header" = "Разрешение доступа к камере";
 "zoom_camera_permission_launch_settings" = "Помощь по запуску камеры";
 "zoom_camera_permission_message" = "Доступ к камере необходим для прохождения видео-проверки";
+
+"zoom_camera_permission_message_enroll" = "Пожалуйста, дайте разрешение на камеру";
+"zoom_camera_permission_message_auth" = "Разрешения вашей камеры отключены. Нажмите ниже, чтобы изменить настройки.";
+"zoom_camera_permission_enable_camera" = "Включить камеру";
+
 "zoom_feedback_a_little_too_close" = "Немного отодвиньтесь";
 "zoom_feedback_a_little_too_close_tablet" = "Отодвиньтесь";
 "zoom_feedback_center_face" = "Лицо по центру";

@@ -10,7 +10,7 @@
 		7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* ZoomAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* ZoomAuthentication.m */; };
-		AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* ZoomAuthentication.h */; };
+		AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* ZoomAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09DD2535B76B006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */; };
 /* End PBXBuildFile section */
 
