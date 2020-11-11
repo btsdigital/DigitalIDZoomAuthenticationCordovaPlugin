@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */; };
+		AA350279255908CA0049676D /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA350278255908CA0049676D /* FaceTec.strings */; };
+		AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA887EE2555021300EA506E /* FaceTecSDK.framework */; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AABF09C32535AD65006629E5 /* ZoomAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* ZoomAuthentication.m */; };
-		AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* ZoomAuthentication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AABF09DD2535B76B006629E5 /* ZoomAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */; };
+		AABF09C32535AD65006629E5 /* FaceTecSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* FaceTecSDK.m */; };
+		AABF09C42535AD65006629E5 /* FaceTecSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* FaceTecSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,12 +32,13 @@
 		29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB216CA26342482DF352D2A /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; sourceTree = "<group>"; };
+		AA350278255908CA0049676D /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
+		AAA887EE2555021300EA506E /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTecSDK.framework; sourceTree = SOURCE_ROOT; };
 		AABF09B52535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalIDZoomAuthenticationCordovaPlugin.h; sourceTree = "<group>"; };
 		AABF09B92535AD15006629E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AABF09C12535AD65006629E5 /* ZoomAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomAuthentication.m; sourceTree = "<group>"; };
-		AABF09C22535AD65006629E5 /* ZoomAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomAuthentication.h; sourceTree = "<group>"; };
-		AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZoomAuthentication.framework; sourceTree = SOURCE_ROOT; };
+		AABF09C12535AD65006629E5 /* FaceTecSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceTecSDK.m; sourceTree = "<group>"; };
+		AABF09C22535AD65006629E5 /* FaceTecSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceTecSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
-				AABF09DD2535B76B006629E5 /* ZoomAuthentication.framework in Frameworks */,
+				AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +83,11 @@
 		AABF09B72535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				AABF09DC2535B76B006629E5 /* ZoomAuthentication.framework */,
+				AA350278255908CA0049676D /* FaceTec.strings */,
+				AAA887EE2555021300EA506E /* FaceTecSDK.framework */,
 				AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */,
-				AABF09C22535AD65006629E5 /* ZoomAuthentication.h */,
-				AABF09C12535AD65006629E5 /* ZoomAuthentication.m */,
+				AABF09C22535AD65006629E5 /* FaceTecSDK.h */,
+				AABF09C12535AD65006629E5 /* FaceTecSDK.m */,
 				AABF09B92535AD15006629E5 /* Info.plist */,
 			);
 			path = DigitalIDZoomAuthenticationCordovaPlugin;
@@ -107,7 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */,
-				AABF09C42535AD65006629E5 /* ZoomAuthentication.h in Headers */,
+				AABF09C42535AD65006629E5 /* FaceTecSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA350279255908CA0049676D /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABF09C32535AD65006629E5 /* ZoomAuthentication.m in Sources */,
+				AABF09C32535AD65006629E5 /* FaceTecSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +356,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.digitalid.did.zoom-cordova-plugin.DigitalIDZoomAuthenticationCordovaPlugin";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -383,7 +387,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.digitalid.did.zoom-cordova-plugin.DigitalIDZoomAuthenticationCordovaPlugin";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
