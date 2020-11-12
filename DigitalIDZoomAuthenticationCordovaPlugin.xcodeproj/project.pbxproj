@@ -127,6 +127,7 @@
 				AABF09B22535AD15006629E5 /* Frameworks */,
 				AABF09B32535AD15006629E5 /* Resources */,
 				AABF09D92535B3E3006629E5 /* Embed Frameworks */,
+				AA1D4D65255CEABE00FF689E /* FaceTecSDK → strip-unused-architectures-from-target */,
 			);
 			buildRules = (
 			);
@@ -201,6 +202,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		AA1D4D65255CEABE00FF689E /* FaceTecSDK → strip-unused-architectures-from-target */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "FaceTecSDK → strip-unused-architectures-from-target";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh \"${PROJECT_DIR}/FaceTecSDK.framework/strip-unused-architectures-from-target.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
