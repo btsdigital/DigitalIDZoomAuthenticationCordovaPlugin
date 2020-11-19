@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */; };
-		AA350279255908CA0049676D /* FaceTec.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA350278255908CA0049676D /* FaceTec.strings */; };
 		AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA887EE2555021300EA506E /* FaceTecSDK.framework */; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* FaceTecSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* FaceTecSDK.m */; };
 		AABF09C42535AD65006629E5 /* FaceTecSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* FaceTecSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F47B17E0FFB12DA2149D9ABE /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E3760E4E193FE530894466 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +28,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14E3760E4E193FE530894466 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; sourceTree = "<group>"; };
-		2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB216CA26342482DF352D2A /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; sourceTree = "<group>"; };
-		AA350278255908CA0049676D /* FaceTec.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FaceTec.strings; sourceTree = "<group>"; };
 		AAA887EE2555021300EA506E /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTecSDK.framework; sourceTree = SOURCE_ROOT; };
 		AABF09B52535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalIDZoomAuthenticationCordovaPlugin.h; sourceTree = "<group>"; };
@@ -46,8 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB6E991AFBDCEBEC830CFB3 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
 				AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */,
+				F47B17E0FFB12DA2149D9ABE /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +55,7 @@
 		A3247A8CFD39B3186609516A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E886C3555A379063DDBD867 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */,
+				14E3760E4E193FE530894466 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,7 +81,6 @@
 		AABF09B72535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				AA350278255908CA0049676D /* FaceTec.strings */,
 				AAA887EE2555021300EA506E /* FaceTecSDK.framework */,
 				AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */,
 				AABF09C22535AD65006629E5 /* FaceTecSDK.h */,
@@ -144,7 +141,7 @@
 		AABF09AC2535AD15006629E5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					AABF09B42535AD15006629E5 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -158,6 +155,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				kk,
 			);
 			mainGroup = AABF09AB2535AD15006629E5;
 			productRefGroup = AABF09B62535AD15006629E5 /* Products */;
@@ -174,7 +173,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA350279255908CA0049676D /* FaceTec.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +217,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sh \"${PROJECT_DIR}/FaceTecSDK.framework/strip-unused-architectures-from-target.sh\"\n";
+			shellScript = "# sh \"${PROJECT_DIR}/FaceTecSDK.framework/strip-unused-architectures-from-target.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -239,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -301,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -357,25 +357,40 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P8G9G5G6AD;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"Cordova\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.digitalid.did.zoom-cordova-plugin.DigitalIDZoomAuthenticationCordovaPlugin";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -388,25 +403,40 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FB216CA26342482DF352D2A /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = P8G9G5G6AD;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"Cordova\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kz.digitalid.did.zoom-cordova-plugin.DigitalIDZoomAuthenticationCordovaPlugin";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

@@ -1256,9 +1256,15 @@ enum FaceTecSessionStatus : NSInteger;
  *  The Low Quality Audit Trail finds images that can be displayed to the user that will be intuitively indicative of the reason for the session not completing successfully.
  */
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nullable lowQualityAuditTrailCompressedBase64;
-/** FaceTec Biometric FaceScan. */
+/**
+ * The 3D FaceScan generated from the User Session that was just performed.  faceScan is the raw binary and faceScanBase64 is the base64-encoded version.
+ *  For more information about 3D FaceScans, please see the Developer Documentation.
+ */
 @property (nonatomic, readonly, copy) NSData * _Nullable faceScan;
-/** FaceTec Biometric FaceScanBase64. */
+/**
+ * The 3D FaceScan generated from the User Session that was just performed.  faceScan is the raw binary and faceScanBase64 is the base64-encoded version.
+ *  For more information about 3D FaceScans, please see the Developer Documentation.
+ */
 @property (nonatomic, readonly, copy) NSString * _Nullable faceScanBase64;
 /** Unique id for a Session. */
 @property (nonatomic, readonly, copy) NSString * _Nonnull sessionId;
