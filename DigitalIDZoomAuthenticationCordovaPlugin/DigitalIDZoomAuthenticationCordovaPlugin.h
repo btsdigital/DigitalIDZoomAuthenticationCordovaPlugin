@@ -13,5 +13,4 @@ FOUNDATION_EXPORT double DigitalIDZoomAuthenticationCordovaPluginVersionNumber;
 //! Project version string for DigitalIDZoomAuthenticationCordovaPlugin.
 FOUNDATION_EXPORT const unsigned char DigitalIDZoomAuthenticationCordovaPluginVersionString[];
 
-#import <DigitalIDZoomAuthenticationCordovaPlugin/FaceTecSDK.h>
-#import <FaceTecSDK/FaceTecSDK.h>
+#import <DigitalIDZoomAuthenticationCordovaPlugin/FaceTecCordovaSDK.h>

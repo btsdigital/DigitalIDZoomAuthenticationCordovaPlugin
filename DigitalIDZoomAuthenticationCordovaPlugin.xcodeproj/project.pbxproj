@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA887EE2555021300EA506E /* FaceTecSDK.framework */; };
+		AAAC83192567DF7400316823 /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAC83182567DF7400316823 /* FaceTecSDK.framework */; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* FaceTecCordovaSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */; };
 		AABF09C42535AD65006629E5 /* FaceTecCordovaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,7 +31,7 @@
 		14E3760E4E193FE530894466 /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DA1B58FCA2349D2D033D75 /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.debug.xcconfig"; sourceTree = "<group>"; };
 		9FB216CA26342482DF352D2A /* Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; path = "Target Support Files/Pods-DigitalIDZoomAuthenticationCordovaPlugin/Pods-DigitalIDZoomAuthenticationCordovaPlugin.release.xcconfig"; sourceTree = "<group>"; };
-		AAA887EE2555021300EA506E /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTecSDK.framework; sourceTree = SOURCE_ROOT; };
+		AAAC83182567DF7400316823 /* FaceTecSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceTecSDK.framework; sourceTree = "<group>"; };
 		AABF09B52535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DigitalIDZoomAuthenticationCordovaPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalIDZoomAuthenticationCordovaPlugin.h; sourceTree = "<group>"; };
 		AABF09B92535AD15006629E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA887EF2555021300EA506E /* FaceTecSDK.framework in Frameworks */,
 				F47B17E0FFB12DA2149D9ABE /* Pods_DigitalIDZoomAuthenticationCordovaPlugin.framework in Frameworks */,
+				AAAC83192567DF7400316823 /* FaceTecSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +63,7 @@
 		AABF09AB2535AD15006629E5 = {
 			isa = PBXGroup;
 			children = (
+				AAAC83182567DF7400316823 /* FaceTecSDK.framework */,
 				AABF09B72535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin */,
 				AABF09B62535AD15006629E5 /* Products */,
 				BA89ECE86CE5E75F7AE5151B /* Pods */,
@@ -81,7 +82,6 @@
 		AABF09B72535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				AAA887EE2555021300EA506E /* FaceTecSDK.framework */,
 				AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */,
 				AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */,
 				AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */,
