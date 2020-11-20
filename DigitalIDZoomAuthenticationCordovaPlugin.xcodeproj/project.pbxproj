@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AAAC83192567DF7400316823 /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAC83182567DF7400316823 /* FaceTecSDK.framework */; };
+		AAAC83222567F04C00316823 /* FaceTecSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAAC83182567DF7400316823 /* FaceTecSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* FaceTecCordovaSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */; };
 		AABF09C42535AD65006629E5 /* FaceTecCordovaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,6 +22,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AAAC83222567F04C00316823 /* FaceTecSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +124,6 @@
 				AABF09B02535AD15006629E5 /* Headers */,
 				AABF09B12535AD15006629E5 /* Sources */,
 				AABF09B22535AD15006629E5 /* Frameworks */,
-				AABF09B32535AD15006629E5 /* Resources */,
 				AABF09D92535B3E3006629E5 /* Embed Frameworks */,
 				AA1D4D65255CEABE00FF689E /* FaceTecSDK → strip-unused-architectures-from-target */,
 			);
@@ -167,16 +168,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		AABF09B32535AD15006629E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		989287E1655C6993130F01A7 /* [CP] Check Pods Manifest.lock */ = {
@@ -369,8 +360,8 @@
 				EXCLUDED_ARCHS = "$(inherited) $(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT))";
 				EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_simulator__NATIVE_ARCH_64_BIT_x86_64 = "arm64 arm64e armv7 armv7s armv6 armv8";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -418,8 +409,8 @@
 				EXCLUDED_ARCHS = "$(inherited) $(EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_$(EFFECTIVE_PLATFORM_SUFFIX)__NATIVE_ARCH_64_BIT_$(NATIVE_ARCH_64_BIT))";
 				EXCLUDED_ARCHS__EFFECTIVE_PLATFORM_SUFFIX_simulator__NATIVE_ARCH_64_BIT_x86_64 = "arm64 arm64e armv7 armv7s armv6 armv8";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = DigitalIDZoomAuthenticationCordovaPlugin/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
