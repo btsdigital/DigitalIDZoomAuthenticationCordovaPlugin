@@ -1,6 +1,6 @@
 /********* FaceTecSDK.m Cordova Plugin Implementation *******/
 
-#import <DigitalIDZoomAuthenticationCordovaPlugin/FaceTecSDK.h>
+#import <DigitalIDZoomAuthenticationCordovaPlugin/FaceTecCordovaSDK.h>
 #import <FaceTecSDK/FaceTecSDK.h>
 #import <CoreGraphics/CoreGraphics.h>
 
@@ -10,7 +10,7 @@
                  blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
                 alpha:1.0]
 
-@implementation FaceTecSDK
+@implementation FaceTecCordovaSDK
 
 - (void)initializeInDevelopmentMode:(CDVInvokedUrlCommand*)command {
     NSString *deviceKeyIdentifier = command.arguments[0];
@@ -18,7 +18,7 @@
    
     [self setupLocalization];
     
-    __weak FaceTecSDK *weakSelf = self;
+    __weak FaceTecCordovaSDK *weakSelf = self;
     [[FaceTec sdk] initializeInDevelopmentMode: deviceKeyIdentifier
                          faceScanEncryptionKey: publicEncryptionKey
                                     completion: ^(BOOL validationResult) {
@@ -42,7 +42,7 @@
     
     [self setupLocalization];
     
-    __weak FaceTecSDK *weakSelf = self;
+    __weak FaceTecCordovaSDK *weakSelf = self;
     [self.commandDelegate runInBackground:^{
         [[FaceTec sdk] initializeInProductionMode: productionKey
                               deviceKeyIdentifier: deviceKeyIdentifier

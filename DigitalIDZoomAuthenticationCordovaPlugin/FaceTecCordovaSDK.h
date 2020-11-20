@@ -2,7 +2,7 @@
 #import <Cordova/CDV.h>
 #import <FaceTecSDK/FaceTecSDK.h>
 
-@interface FaceTecSDK : CDVPlugin <FaceTecSessionResult, FaceTecFaceScanProcessorDelegate>
+@interface FaceTecCordovaSDK : CDVPlugin <FaceTecSessionResult, FaceTecFaceScanProcessorDelegate>
 
 @property (nonatomic, strong) id<FaceTecFaceScanResultCallback> _Nonnull faceScanResultCallback;
 @property (nonatomic, strong) CDVInvokedUrlCommand* _Nonnull pendingCommand;
