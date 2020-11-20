@@ -2,7 +2,6 @@
 
 #import <DigitalIDZoomAuthenticationCordovaPlugin/FaceTecCordovaSDK.h>
 #import <FaceTecSDK/FaceTecSDK.h>
-#import <CoreGraphics/CoreGraphics.h>
 
 #define UIColorFromRGB(rgbValue) \
 [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \

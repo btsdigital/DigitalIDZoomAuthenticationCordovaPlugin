@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AAAC83192567DF7400316823 /* FaceTecSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAC83182567DF7400316823 /* FaceTecSDK.framework */; };
-		AAAC83222567F04C00316823 /* FaceTecSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAAC83182567DF7400316823 /* FaceTecSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AABF09BA2535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09B82535AD15006629E5 /* DigitalIDZoomAuthenticationCordovaPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AABF09C32535AD65006629E5 /* FaceTecCordovaSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */; };
 		AABF09C42535AD65006629E5 /* FaceTecCordovaSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -22,7 +21,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AAAC83222567F04C00316823 /* FaceTecSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +369,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -420,7 +418,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.7;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
