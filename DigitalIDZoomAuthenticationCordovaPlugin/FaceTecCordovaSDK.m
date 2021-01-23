@@ -63,7 +63,6 @@
 
 - (void)setupCustomization {
     FaceTecCustomization *customization = [self customCustomization];
-    [[customization overlayCustomization] setShowBrandingImage:NO];
     [[FaceTec sdk] setCustomization:customization];
 }
 
@@ -191,7 +190,6 @@
     FaceTecCancelButtonLocation cancelButtonLocation = FaceTecCancelButtonLocationTopLeft;
 
     // For image Customization
-//    UIImage *yourAppLogoImage = [UIImage imageNamed:@"FaceTec_your_app_logo"];
     FaceTecSecurityWatermarkImage securityWatermarkImage = FaceTecSecurityWatermarkImageFaceTecZoom;
     
     // Set a default customization
@@ -203,8 +201,13 @@
     defaultCustomization.frameCustomization.borderColor = borderColor;
 
     // Set Overlay Customization
-//    defaultCustomization.overlayCustomization.brandingImage = yourAppLogoImage;
-    defaultCustomization.overlayCustomization.backgroundColor = outerBackgroundColor;
+    
+    UIImage *brandingImage = [UIImage imageNamed:@"did-logo"
+                                        inBundle:[NSBundle bundleForClass:[self class]]
+                   compatibleWithTraitCollection:nil];
+    defaultCustomization.overlayCustomization.brandingImage = brandingImage;
+    defaultCustomization.overlayCustomization.showBrandingImage = YES;
+    defaultCustomization.overlayCustomization.backgroundColor = [UIColor whiteColor];
 
     // Set Guidance Customization
     defaultCustomization.guidanceCustomization.backgroundColors = @[frameColor, frameColor];

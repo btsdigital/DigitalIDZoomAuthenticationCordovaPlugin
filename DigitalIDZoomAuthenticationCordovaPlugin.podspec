@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'DigitalIDZoomAuthenticationCordovaPlugin'
-  s.version               = '0.2.7'
+  s.version               = '0.2.8'
   s.summary               = 'DigitalID FaceTech SDK iOS cordova plugin'
   s.description           = <<-DESC
 The cordova plugin for Zoom SDK framework integration
@@ -11,6 +11,7 @@ The cordova plugin for Zoom SDK framework integration
   s.source                = { :git => 'https://github.com/btsdigital/DigitalIDZoomAuthenticationCordovaPlugin.git', :tag => "v#{s.version}" }
   s.source_files          = ['DigitalIDZoomAuthenticationCordovaPlugin/*.{h,m}']
   s.ios.vendored_frameworks   = 'FaceTecSDK.framework'
+  s.resources             = "DigitalIDZoomAuthenticationCordovaPlugin/*.xcassets"
   s.dependency          'Cordova'
   s.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }

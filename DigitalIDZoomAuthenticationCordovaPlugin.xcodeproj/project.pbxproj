@@ -37,6 +37,7 @@
 		AABF09B92535AD15006629E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceTecCordovaSDK.m; sourceTree = "<group>"; };
 		AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceTecCordovaSDK.h; sourceTree = "<group>"; };
+		AAD104A625BBF6EE00349FCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 				AABF09C22535AD65006629E5 /* FaceTecCordovaSDK.h */,
 				AABF09C12535AD65006629E5 /* FaceTecCordovaSDK.m */,
 				AABF09B92535AD15006629E5 /* Info.plist */,
+				AAD104A625BBF6EE00349FCA /* Assets.xcassets */,
 			);
 			path = DigitalIDZoomAuthenticationCordovaPlugin;
 			sourceTree = "<group>";
