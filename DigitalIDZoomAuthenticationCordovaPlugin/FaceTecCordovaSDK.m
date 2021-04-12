@@ -158,10 +158,18 @@
 
 - (void)setupLocalization {
     NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-language"];
+    NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-userName"];
     if (language != nil) {
         [[FaceTec sdk] setLanguage:language];
     }
+    
     [[FaceTec sdk] configureLocalizationWithTable:@"FaceTec" bundle:[NSBundle bundleForClass:[self class]]];
+    
+    if (userName != nil) {
+        NSString *welcomeBack = [@"С возвращением, " stringByAppendingString:userName];
+        NSDictionary *userNameDictionary = @{ @"FaceTec_instructions_header_ready": welcomeBack };
+        [[FaceTec sdk] setDynamicStrings:userNameDictionary];
+    }
 }
 
 - (FaceTecCustomization *)customCustomization {
