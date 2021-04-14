@@ -67,6 +67,9 @@
 }
 
 - (void)createSession:(CDVInvokedUrlCommand*)command {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
+        [self setupLocalization];
+    });
     self.pendingCommand = command;
     NSString *sessionToken = command.arguments[0];
     UIViewController* vc = [[FaceTec sdk] createSessionVCWithFaceScanProcessor:self sessionToken:sessionToken];
@@ -159,14 +162,20 @@
 - (void)setupLocalization {
     NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-language"];
     NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-userName"];
+    NSString *welcome = @"С возвращением, ";
     if (language != nil) {
         [[FaceTec sdk] setLanguage:language];
+        if ([language isEqualToString:@"kk"]) {
+            welcome = @"Қайта оралуыңызбен, ";
+        } else if ([language isEqualToString:@"en"]) {
+            welcome = @"Welcome back, ";
+        }
     }
     
     [[FaceTec sdk] configureLocalizationWithTable:@"FaceTec" bundle:[NSBundle bundleForClass:[self class]]];
     
     if (userName != nil) {
-        NSString *welcomeBack = [@"С возвращением, " stringByAppendingString:userName];
+        NSString *welcomeBack = [welcome stringByAppendingString:userName];
         NSDictionary *userNameDictionary = @{ @"FaceTec_instructions_header_ready": welcomeBack };
         [[FaceTec sdk] setDynamicStrings:userNameDictionary];
     }
