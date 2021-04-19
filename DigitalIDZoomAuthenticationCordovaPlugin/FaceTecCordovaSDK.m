@@ -184,10 +184,9 @@
 - (FaceTecCustomization *)customCustomization {
     
     // For Color Customization
-    UIColor *outerBackgroundColor = UIColorFromRGB(0xffffff);
     UIColor *frameColor = UIColorFromRGB(0xffffff);
     UIColor *borderColor = UIColorFromRGB(0xffffff);
-    UIColor *ovalColor = UIColorFromRGB(0xe3e3e3);
+    UIColor *ovalColor = UIColorFromRGB(0x0075eb);
     UIColor *dualSpinnerColor = UIColorFromRGB(0x0075eb);
     UIColor *textColor = UIColorFromRGB(0x29323c);
     UIColor *buttonAndFeedbackBarColor =  UIColorFromRGB(0x0075eb);
@@ -227,6 +226,10 @@
     defaultCustomization.overlayCustomization.backgroundColor = [UIColor whiteColor];
 
     // Set Guidance Customization
+    UIImage *retryIdealImage = [UIImage imageNamed:@"retry-image-ideal"
+                                        inBundle:[NSBundle bundleForClass:[self class]]
+                   compatibleWithTraitCollection:nil];
+    defaultCustomization.guidanceCustomization.retryScreenIdealImage = retryIdealImage;
     defaultCustomization.guidanceCustomization.backgroundColors = @[frameColor, frameColor];
     defaultCustomization.guidanceCustomization.foregroundColor = textColor;
     defaultCustomization.guidanceCustomization.buttonBackgroundNormalColor = buttonAndFeedbackBarColor;
