@@ -176,7 +176,7 @@
     
     if (userName != nil) {
         NSString *welcomeBack = [welcome stringByAppendingString:userName];
-        NSDictionary *userNameDictionary = @{ @"FaceTec_instructions_header_ready": welcomeBack };
+        NSDictionary *userNameDictionary = @{ @"FaceTec_instructions_header_ready_1": welcomeBack };
         [[FaceTec sdk] setDynamicStrings:userNameDictionary];
     }
 }
@@ -240,6 +240,10 @@
     defaultCustomization.guidanceCustomization.buttonTextHighlightColor = buttonAndFeedbackBarTextColor;
     defaultCustomization.guidanceCustomization.retryScreenImageBorderColor = borderColor;
     defaultCustomization.guidanceCustomization.retryScreenOvalStrokeColor = borderColor;
+    
+    // Set vocal guidance customization
+    
+    defaultCustomization.vocalGuidanceCustomization.mode = FaceTecVocalGuidanceModeNoVocalGuidance;
 
     // Set Oval Customization
     defaultCustomization.ovalCustomization.strokeColor = ovalColor;
