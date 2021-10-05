@@ -130,6 +130,11 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)setLanguage:(CDVInvokedUrlCommand*)command {
+    NSString *currentLanguage = command.arguments[0];
+    [[FaceTec sdk] setLanguage:currentLanguage];
+}
+
 - (NSString*)getSdkStatusString {
     switch ([[FaceTec sdk] getStatus]) {
         case FaceTecSDKStatusNeverInitialized:
