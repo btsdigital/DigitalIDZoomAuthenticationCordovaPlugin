@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = 'DigitalIDZoomAuthenticationCordovaPlugin'
-  s.version               = '0.6.1'
+  s.version               = '0.6.2'
   s.summary               = 'DigitalID FaceTech SDK iOS cordova plugin'
   s.description           = <<-DESC
 The cordova plugin for Zoom SDK framework integration
