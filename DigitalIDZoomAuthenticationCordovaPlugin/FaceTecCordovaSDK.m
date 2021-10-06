@@ -133,6 +133,7 @@
 - (void)setLanguage:(CDVInvokedUrlCommand*)command {
     NSString *currentLanguage = command.arguments[0];
     [[FaceTec sdk] setLanguage:currentLanguage];
+    [self setZoomHeader:currentLanguage];
 }
 
 - (NSString*)getSdkStatusString {
@@ -167,10 +168,14 @@
 
 - (void)setupLocalization {
     NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-language"];
+    [[FaceTec sdk] setLanguage:language];
+    [self setZoomHeader:language];
+}
+
+- (void)setZoomHeader:(NSString*)language {
     NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-userName"];
     NSString *welcome = @"С возвращением, ";
     if (language != nil) {
-        [[FaceTec sdk] setLanguage:language];
         if ([language isEqualToString:@"kk"]) {
             welcome = @"Қайта оралуыңызбен, ";
         } else if ([language isEqualToString:@"en"]) {
