@@ -14,9 +14,7 @@
 - (void)initializeInDevelopmentMode:(CDVInvokedUrlCommand*)command {
     NSString *deviceKeyIdentifier = command.arguments[0];
     NSString *publicEncryptionKey = command.arguments[1];
-   
-    [self setupLocalization];
-    
+       
     __weak FaceTecCordovaSDK *weakSelf = self;
     [[FaceTec sdk] initializeInDevelopmentMode: deviceKeyIdentifier
                          faceScanEncryptionKey: publicEncryptionKey
@@ -38,9 +36,7 @@
     NSString *productionKey = command.arguments[0];
     NSString *deviceKeyIdentifier = command.arguments[1];
     NSString *publicEncryptionKey = command.arguments[2];
-    
-    [self setupLocalization];
-    
+        
     __weak FaceTecCordovaSDK *weakSelf = self;
     [self.commandDelegate runInBackground:^{
         [[FaceTec sdk] initializeInProductionMode: productionKey
@@ -68,7 +64,6 @@
 
 - (void)createSession:(CDVInvokedUrlCommand*)command {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(void){
-        [self setupLocalization];
         [self setupCustomization];
     });
     self.pendingCommand = command;
@@ -130,10 +125,11 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
-- (void)setLanguage:(CDVInvokedUrlCommand*)command {
+- (void)setLanguageAndZoomHeader:(CDVInvokedUrlCommand*)command {
     NSString *currentLanguage = command.arguments[0];
+    NSString *userName = command.arguments[1];
     [[FaceTec sdk] setLanguage:currentLanguage];
-    [self setZoomHeader:currentLanguage];
+    [self setZoomHeader:currentLanguage userName:userName];
 }
 
 - (NSString*)getSdkStatusString {
@@ -166,14 +162,7 @@
     return nil;
 }
 
-- (void)setupLocalization {
-    NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-language"];
-    [[FaceTec sdk] setLanguage:language];
-    [self setZoomHeader:language];
-}
-
-- (void)setZoomHeader:(NSString*)language {
-    NSString *userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-userName"];
+- (void)setZoomHeader:(NSString*)language userName:(NSString*)userName {
     NSString *welcome = @"С возвращением, ";
     if (language != nil) {
         if ([language isEqualToString:@"kk"]) {
@@ -185,7 +174,7 @@
     
     [[FaceTec sdk] configureLocalizationWithTable:@"FaceTec" bundle:[NSBundle bundleForClass:[self class]]];
     
-    if (userName != nil) {
+    if (userName != nil && ![userName isEqualToString:@""]) {
         NSString *welcomeBack = [welcome stringByAppendingString:userName];
         NSDictionary *userNameDictionary = @{ @"FaceTec_instructions_header_ready_1": welcomeBack };
         [[FaceTec sdk] setDynamicStrings:userNameDictionary];
