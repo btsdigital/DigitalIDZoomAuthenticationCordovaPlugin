@@ -69,6 +69,7 @@ extern NSString *const FaceTecStringKeyResultIdscanSkipOrErrorNfcMessage;
 extern NSString *const FaceTecStringKeyResultIdscanRetryFaceDidNotMatchMessage;
 extern NSString *const FaceTecStringKeyResultIdscanRetryIdNotFullyVisibleMessage;
 extern NSString *const FaceTecStringKeyResultIdscanRetryOcrResultsNotGoodEnoughMessage;
+extern NSString *const FaceTecStringKeyResultIdscanRetryIdTypeNotSupportedMessage;
 extern NSString *const FaceTecStringKeyRetryHeader;
 extern NSString *const FaceTecStringKeyRetrySubheaderMessage;
 extern NSString *const FaceTecStringKeyRetryInstructionMessage1;

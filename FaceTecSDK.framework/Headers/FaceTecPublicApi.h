@@ -97,14 +97,6 @@ typedef NS_ENUM(NSInteger, FaceTecCameraPermissionStatus) {
  */
 @optional
 - (UIView * _Nullable)onCreateNewResultScreenActivityIndicatorView NS_SWIFT_NAME(onCreateNewResultScreenActivityIndicatorView());
-
-
-@optional
-- (UIView * _Nullable)onCreateNFCStartingAnimationView NS_SWIFT_NAME(onCreateNFCStartingAnimationView());
-
-@optional
-- (UIView * _Nullable)onCreateNFCScanningAnimationView NS_SWIFT_NAME(onCreateNFCScanningAnimationView());
-
 /**
  Configure a custom UIView to display on the Result Screen for success scenarios.
  This method will be called every time either FaceTecFaceScanResultCallback.succeed() or FaceTecIDScanResultCallback.succeed() is called while the Result Screen is displayed after completing the and/or ID Scan process.
@@ -125,6 +117,35 @@ typedef NS_ENUM(NSInteger, FaceTecCameraPermissionStatus) {
  */
 @optional
 - (UIView * _Nullable)onCreateNewResultScreenUnsuccessAnimationView NS_SWIFT_NAME(onCreateNewResultScreenUnsuccessAnimationView());
+/**
+ Configure a custom UIView to display on the NFC Scan Screen for the status animation before the user starts to scan their NFC chip.
+ This method will be called every time that NFC scanning is ready-to-start on the NFC Scan Screen.
+ Sizing of the UIView's contents should be calculated relative to the UIView's bounds. Animations should be setup to start in the UIView's didMoveToSuperview method.
+ Note: The NFC Starting animation is displayed indefinitely during the device-side work to scan the NFC chip, so the custom animation should be set to loop/repeat infinitely. If the animation ends before the NFC Starting animation is dismissed, the animation will be restarted.
+ If this retuns a UIView instance, the UIView supplied will be used instead of the default internal UIView.
+ If this returns nil, the default internal UIView will be used.
+ */
+@optional
+- (UIView * _Nullable)onCreateNFCStartingAnimationView NS_SWIFT_NAME(onCreateNFCStartingAnimationView());
+/**
+ Configure a custom UIView to display on the NFC Scan Screen for the status animation while the user scan's their NFC chip.
+ This method will be called every time that NFC scanning is in-progress on the NFC Scan Screen.
+ Sizing of the UIView's contents should be calculated relative to the UIView's bounds. Animations should be setup to start in the UIView's didMoveToSuperview method.
+ Note: The NFC Scanning animation is displayed indefinitely during the device-side work to scan the NFC chip, so the custom animation should be set to loop/repeat infinitely. If the animation ends before the NFC Scanning animation is dismissed, the animation will be restarted.
+ If this retuns a UIView instance, the UIView supplied will be used instead of the default internal UIView.
+ If this returns nil, the default internal UIView will be used.
+ */
+@optional
+- (UIView * _Nullable)onCreateNFCScanningAnimationView NS_SWIFT_NAME(onCreateNFCScanningAnimationView());
+/**
+ Configure a custom UIView to display on the NFC Scan Screen for the status animation after NFC Scan is skipped due to an error or user interaction.
+ This method will be called if the NFC Scan is skipped due to an error or user interaction.
+ Sizing of the UIView's contents should be calculated relative to the UIView's bounds. Animations should be setup to start in the UIView's didMoveToSuperview method.
+ If this retuns a UIView instance, the UIView supplied will be used instead of the default internal UIView.
+ If this returns nil, the default internal UIView will be used.
+ */
+@optional
+- (UIView * _Nullable)onCreateNFCSkipOrErrorAnimationView NS_SWIFT_NAME(onCreateNFCSkipOrErrorAnimationView());
 @end
 
 /**
@@ -186,7 +207,13 @@ __attribute__((visibility("default")))
  * This function allows special runtime control of the various possible result messages shown when the result animation occurs for an ID Scan Session.
  * Please note that you can also customize these strings via the standard customization/localization methods provided.
  */
-+ (void) setIDScanResultScreenMessageOverridesForSuccessFrontSide:(NSString * _Nonnull)successFrontSide successFrontSideBackNext:(NSString * _Nonnull)successFrontSideBackNext successBackSide:(NSString * _Nonnull)successBackSide successUserConfirmation:(NSString * _Nonnull)successUserConfirmation successNFC:(NSString * _Nonnull)successNFC retryFaceDidNotMatch:(NSString * _Nonnull)retryFaceDidNotMatch retryIDNotFullyVisible:(NSString * _Nonnull)retryIDNotFullyVisible retryOCRResultsNotGoodEnough:(NSString * _Nonnull)retryOCRResultsNotGoodEnough skipOrErrorNFC:(NSString * _Nonnull)skipOrErrorNFC NS_SWIFT_NAME(setIDScanResultScreenMessageOverrides(successFrontSide:successFrontSideBackNext:successBackSide:successUserConfirmation:successNFC:retryFaceDidNotMatch:retryIDNotFullyVisible:retryOCRResultsNotGoodEnough:skipOrErrorNFC:));
++ (void) setIDScanResultScreenMessageOverridesForSuccessFrontSide:(NSString * _Nonnull)successFrontSide successFrontSideBackNext:(NSString * _Nonnull)successFrontSideBackNext successBackSide:(NSString * _Nonnull)successBackSide successUserConfirmation:(NSString * _Nonnull)successUserConfirmation successNFC:(NSString * _Nonnull)successNFC retryFaceDidNotMatch:(NSString * _Nonnull)retryFaceDidNotMatch retryIDNotFullyVisible:(NSString * _Nonnull)retryIDNotFullyVisible retryOCRResultsNotGoodEnough:(NSString * _Nonnull)retryOCRResultsNotGoodEnough retryIDTypeNotSupported:(NSString * _Nonnull)retryIDTypeNotSupported skipOrErrorNFC:(NSString * _Nonnull)skipOrErrorNFC NS_SWIFT_NAME(setIDScanResultScreenMessageOverrides(successFrontSide:successFrontSideBackNext:successBackSide:successUserConfirmation:successNFC:retryFaceDidNotMatch:retryIDNotFullyVisible:retryOCRResultsNotGoodEnough:retryIDTypeNotSupported:skipOrErrorNFC:));
+/**
+ * @deprecated - This API method is deprecated and will be removed in an upcoming release of the iOS SDK. Use the non-deprecated setIDScanResultScreenMessageOverrides API method instead.
+ * This function allows special runtime control of the various possible result messages shown when the result animation occurs for an ID Scan Session.
+ * Please note that you can also customize these strings via the standard customization/localization methods provided.
+ */
++ (void) setIDScanResultScreenMessageOverridesForSuccessFrontSide:(NSString * _Nonnull)successFrontSide successFrontSideBackNext:(NSString * _Nonnull)successFrontSideBackNext successBackSide:(NSString * _Nonnull)successBackSide successUserConfirmation:(NSString * _Nonnull)successUserConfirmation successNFC:(NSString * _Nonnull)successNFC retryFaceDidNotMatch:(NSString * _Nonnull)retryFaceDidNotMatch retryIDNotFullyVisible:(NSString * _Nonnull)retryIDNotFullyVisible retryOCRResultsNotGoodEnough:(NSString * _Nonnull)retryOCRResultsNotGoodEnough skipOrErrorNFC:(NSString * _Nonnull)skipOrErrorNFC NS_SWIFT_NAME(setIDScanResultScreenMessageOverrides(successFrontSide:successFrontSideBackNext:successBackSide:successUserConfirmation:successNFC:retryFaceDidNotMatch:retryIDNotFullyVisible:retryOCRResultsNotGoodEnough:skipOrErrorNFC:)) DEPRECATED_MSG_ATTRIBUTE("This API method is deprecated and will be removed in an upcoming release of the iOS SDK. Use the non-deprecated setIDScanResultScreenMessageOverrides API method instead.");
 /**
  * @deprecated - This API method is deprecated and will be removed in an upcoming release of the iOS SDK. Use the non-deprecated setIDScanResultScreenMessageOverrides API method instead.
  * This function allows special runtime control of the various possible result messages shown when the result animation occurs for an ID Scan Session.
