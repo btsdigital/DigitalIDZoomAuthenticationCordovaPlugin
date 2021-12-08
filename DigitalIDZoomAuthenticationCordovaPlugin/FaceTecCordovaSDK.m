@@ -85,7 +85,7 @@
         NSArray* pluginMessage = @[
             @(sessionResult.status),
             sessionResult.faceScanBase64,
-            sessionResult.auditTrailCompressedBase64[0]
+            sessionResult.auditTrailCompressedBase64
         ];
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:pluginMessage];
     } else {
