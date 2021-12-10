@@ -17,5 +17,6 @@
 - (void)getSdkStatus:(CDVInvokedUrlCommand *_Nonnull)command;
 - (void)configureLocalization:(CDVInvokedUrlCommand *_Nonnull)command;
 - (void)setLanguageAndZoomHeader:(CDVInvokedUrlCommand *_Nonnull)command;
+- (void)setLanguage:(CDVInvokedUrlCommand *_Nonnull)command;
 
 @end

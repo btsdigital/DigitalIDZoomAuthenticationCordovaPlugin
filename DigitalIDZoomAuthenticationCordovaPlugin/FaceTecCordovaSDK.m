@@ -58,6 +58,10 @@
 }
 
 - (void)setupCustomization {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"is-aitu-passport-sdk"] == YES) {
+        NSString *language = [[NSUserDefaults standardUserDefaults] objectForKey:@"did-language"];
+        [[FaceTec sdk] setLanguage:language];
+    }
     FaceTecCustomization *customization = [self customCustomization];
     [[FaceTec sdk] setCustomization:customization];
 }
@@ -130,6 +134,11 @@
     NSString *userName = command.arguments[1];
     [[FaceTec sdk] setLanguage:currentLanguage];
     [self setZoomHeader:currentLanguage userName:userName];
+}
+
+- (void)setLanguage:(CDVInvokedUrlCommand*)command {
+    NSString *currentLanguage = command.arguments[0];
+    [[FaceTec sdk] setLanguage:currentLanguage];
 }
 
 - (NSString*)getSdkStatusString {
